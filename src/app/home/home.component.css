@@ -1,3 +1,51 @@
 .logo{
     margin-top:-30px;
 }
+.max-height{
+    max-height: 350px;
+}
+.sprite{
+    background: url('/assets/img/house-logo.jpg');
+}
+
+.house-stark{
+    background-position: -6px -175px; 
+    width: 94px;
+    height: 83px;
+}
+
+.house-tygaryen{
+    background-position: -213px -155px; 
+    width: 84px;
+    height: 87px;
+}
+
+.house-baratheon{
+    background-position: -313px -162px; 
+    width: 88px;
+    height: 102px;
+}
+
+.house-lannister{
+    background-position: -113px -174px; 
+    width: 80px;
+    height: 86px;
+}
+
+.house-tyrell{
+    background-position: -418px -152px; 
+    width: 84px;
+    height: 87px;
+}
+
+.house-unknown{
+    background-position: -518px -160px; 
+    width: 92px;
+    height: 101px;
+}
+
+.house-martell{
+    background-position: -623px -120px; 
+    width: 89px;
+    height: 149px;
+}
