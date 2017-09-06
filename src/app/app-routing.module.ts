@@ -14,6 +14,10 @@ const routes: Routes = [
     loadChildren:'app/home/home.module#HomeModule'
   },
   {
+    path:'dashboard',
+    loadChildren:'app/userdashboard/userdashboard.module#UserdashboardModule'
+  },
+  {
     path:'**',
     component:NotfoundComponent
   }

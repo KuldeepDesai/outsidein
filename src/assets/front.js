@@ -327,24 +327,41 @@ $.fn.alignElementsSameHeight = function () {
     });
 }
 
-$(window).load(function () {
+ // ------------------------------------------------------- //
+    // Login  form validation
+    // ------------------------------------------------------ //
+    $('#login-form').validate({
+        messages: {
+            loginUsername: 'please enter your username',
+            loginPassword: 'please enter your password'
+        }
+    });
 
-    windowWidth = $(window).width();
+    // ------------------------------------------------------- //
+    // Register form validation
+    // ------------------------------------------------------ //
+    $('#register-form').validate({
+        messages: {
+            registerUsername: 'please enter your first name',
+            registerEmail: 'please enter a vaild Email Address',
+            registerPassword: 'please enter your password'
+        }
+    });
 
-    $(this).alignElementsSameHeight();
-    pictureZoom();
-});
-$(window).resize(function () {
+	// ------------------------------------------------------- //
+    // Transition Placeholders
+    // ------------------------------------------------------ //
+    $('input.input-material').on('focus', function () {
+        $(this).siblings('.label-material').addClass('active');
+    });
 
-    newWindowWidth = $(window).width();
+    $('input.input-material').on('blur', function () {
+        $(this).siblings('.label-material').removeClass('active');
 
-    if (windowWidth !== newWindowWidth) {
-	setTimeout(function () {
-	    $(this).alignElementsSameHeight();
-	    fullScreenContainer();
-	    pictureZoom();
-	}, 205);
-	windowWidth = newWindowWidth;
-    }
+        if ($(this).val() !== '') {
+            $(this).siblings('.label-material').addClass('active');
+        } else {
+            $(this).siblings('.label-material').removeClass('active');
+        }
+    });
 
-});
